@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sceneParser", "sceneParser\sceneParser.csproj", "{432A14A8-7CC0-4AF0-B0D1-CDDDB04DA60A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{432A14A8-7CC0-4AF0-B0D1-CDDDB04DA60A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{432A14A8-7CC0-4AF0-B0D1-CDDDB04DA60A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{432A14A8-7CC0-4AF0-B0D1-CDDDB04DA60A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{432A14A8-7CC0-4AF0-B0D1-CDDDB04DA60A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C3CE5527-A222-456C-886B-7390A13AAF04}
+	EndGlobalSection
+EndGlobal

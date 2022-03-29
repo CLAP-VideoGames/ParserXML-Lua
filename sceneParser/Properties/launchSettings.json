@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "sceneParser": {
+      "commandName": "Project",
+      "commandLineArgs": "map.lua escena.scene"
+    }
+  }
+}

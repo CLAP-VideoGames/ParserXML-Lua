@@ -2,7 +2,7 @@
   "profiles": {
     "sceneParser": {
       "commandName": "Project",
-      "commandLineArgs": "map.lua escena.scene"
+      "commandLineArgs": "map.lua test.scene"
     }
   }
 }

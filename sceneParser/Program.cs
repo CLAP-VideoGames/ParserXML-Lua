@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Xml;
 using System.IO;
+using System.Collections.Generic;
 
 namespace sceneParser {
     class Program{
@@ -8,29 +9,39 @@ namespace sceneParser {
         static void Main(string[] args) {
             StreamWriter lua = new StreamWriter(args[0]);
             XmlTextReader xtr = new XmlTextReader(args[1]);
-            lua.WriteLine("mapEntities = {");
+            lua.WriteLine("scene = {");
             char c = ' ';
             int nSpaces = 4;
             string numberIndentations = new string (c, nSpaces);
+
+            List<string> entidades = new List<string>();
 
             while (xtr.Read()){
                 if (xtr.NodeType == XmlNodeType.Element){
                     if (xtr.HasAttributes) {
                         if (xtr.Name == "xml") continue;
                         else if (xtr.Name == "node") {
-                            processEntity(ref lua, ref xtr, ref numberIndentations, ref nSpaces, c);
+                            processEntity(ref lua, ref xtr, ref numberIndentations, ref nSpaces, c, ref entidades);
                         }
                     }
                 }
             }
             lua.WriteLine("}");
+
+            lua.WriteLine("");
+            lua.Write("entities = {");
+            for (int i = 0; i < entidades.Count - 1; i++)
+                lua.Write(entidades[i] + " ,");
+            lua.WriteLine(entidades[entidades.Count - 1] + " }");
+            
             xtr.Close();
             lua.Close();
         }
 
-        static void processEntity(ref StreamWriter lua, ref XmlTextReader xtr, ref string numberIndentations, ref int nSpaces, char c){
+        static void processEntity(ref StreamWriter lua, ref XmlTextReader xtr, ref string numberIndentations, ref int nSpaces, char c, ref List<string> ent){
             xtr.MoveToNextAttribute();
             //Name
+            ent.Add(xtr.Value);
             lua.WriteLine(numberIndentations + xtr.Value + " = {");
             nSpaces += 4;
             numberIndentations = new string(c, nSpaces);

@@ -1,4 +1,4 @@
-mapEntities = {
+scene = {
     cubo = {
         Transform = {
             position = {  -3.500000 ,1.500000 ,-0.000000 },
@@ -57,3 +57,5 @@ mapEntities = {
         }
     },
 }
+
+entities = {cubo ,suelo ,detalle }

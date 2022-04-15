@@ -10,11 +10,11 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>C:\Users\josed\Desktop\Uni\Tercero\2ndo_Cuatri\P3\ParserXML-Lua\program\</OutputPath>
+    <OutputPath>C:\Users\joseda\Desktop\Uni\Tercero\2ndo_Cuatri\P3\ParserXML-Lua\program\</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>C:\Users\josed\Desktop\Uni\Tercero\2ndo_Cuatri\P3\ParserXML-Lua\program\</OutputPath>
+    <OutputPath>C:\Users\joseda\Desktop\Uni\Tercero\2ndo_Cuatri\P3\ParserXML-Lua\program\</OutputPath>
   </PropertyGroup>
 
 </Project>

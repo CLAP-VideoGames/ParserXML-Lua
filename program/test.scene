@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- exporter: blender2ogre 0.8.2 -->
-<!-- export_time: Sun, 10 Apr 2022 12:00:55 +0000 -->
-<scene author="josed" formatVersion="1.1" >
+<!-- export_time: Fri, 15 Apr 2022 16:20:02 +0000 -->
+<!-- previous_export_time: Sun, 10 Apr 2022 12:00:55 +0000 -->
+<scene author="joseda" formatVersion="1.1" >
   <nodes >
     <node name="cubo" >
       <position x="-3.500000" y="1.500000" z="-0.000000" />
       <rotation qw="0.923880" qx="-0.000000" qy="0.000000" qz="-0.382683" />
       <scale x="1.000000" y="1.000000" z="1.000000" />
       <userData >
-        <property data='&lt;bpy id prop: owner="OBcubo", name="cycles", address=0x000001D0A7A1ACA8&gt;' name="cycles" type="IDPropertyGroup" />
-        <property data='&lt;bpy id prop: owner="OBcubo", name="M3", address=0x000001D0A7A1BD88&gt;' name="M3" type="IDPropertyGroup" />
+        <property data='&lt;bpy id prop: owner="OBcubo", name="cycles", address=0x000001A84E11E3E8&gt;' name="cycles" type="IDPropertyGroup" />
+        <property data='&lt;bpy id prop: owner="OBcubo", name="M3", address=0x000001A84E11E348&gt;' name="M3" type="IDPropertyGroup" />
         <property data="Character" name="GameObjectType" type="str" />
         <property data="Type = Dynamic,Collider = Box,Mass = 1.0,isTrigger = false" name="RigidBody" type="str" />
       </userData>
@@ -22,8 +23,8 @@
       <rotation qw="0.923880" qx="-0.000000" qy="0.000000" qz="-0.382683" />
       <scale x="1.000000" y="1.000000" z="1.000000" />
       <userData >
-        <property data='&lt;bpy id prop: owner="OBsuelo", name="cycles", address=0x000001D0A7A77428&gt;' name="cycles" type="IDPropertyGroup" />
-        <property data='&lt;bpy id prop: owner="OBsuelo", name="M3", address=0x000001D0A7A77D88&gt;' name="M3" type="IDPropertyGroup" />
+        <property data='&lt;bpy id prop: owner="OBsuelo", name="cycles", address=0x000001A84E11D268&gt;' name="cycles" type="IDPropertyGroup" />
+        <property data='&lt;bpy id prop: owner="OBsuelo", name="M3", address=0x000001A84E11D1C8&gt;' name="M3" type="IDPropertyGroup" />
         <property data="Map" name="GameObjectType" type="str" />
         <property data="Type = Static, Collider = Box, Mass = 1.0, isTrigger = false" name="RigidBody" type="str" />
       </userData>
@@ -36,8 +37,8 @@
       <rotation qw="0.923880" qx="-0.000000" qy="0.000000" qz="-0.382683" />
       <scale x="1.000000" y="1.000000" z="1.000000" />
       <userData >
-        <property data='&lt;bpy id prop: owner="OBdetalle", name="cycles", address=0x000001D0A7A1B748&gt;' name="cycles" type="IDPropertyGroup" />
-        <property data='&lt;bpy id prop: owner="OBdetalle", name="M3", address=0x000001D0A7A1A348&gt;' name="M3" type="IDPropertyGroup" />
+        <property data='&lt;bpy id prop: owner="OBdetalle", name="cycles", address=0x000001A84E11D588&gt;' name="cycles" type="IDPropertyGroup" />
+        <property data='&lt;bpy id prop: owner="OBdetalle", name="M3", address=0x000001A84E11D4E8&gt;' name="M3" type="IDPropertyGroup" />
         <property data="Map" name="GameObjectType" type="str" />
         <property data="Type = Static, Collider = Box, Mass = 1.0, isTrigger = false" name="RigidBody" type="str" />
       </userData>
@@ -51,13 +52,13 @@
       <file name="cubo.material" />
     </item>
     <item type="material" >
-      <file name="plataforma.material" />
+      <file name="detalle.material" />
     </item>
     <item type="material" >
       <file name="detalle2.material" />
     </item>
     <item type="material" >
-      <file name="detalle.material" />
+      <file name="plataforma.material" />
     </item>
   </externals>
   <environment >

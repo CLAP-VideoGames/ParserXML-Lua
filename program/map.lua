@@ -1,18 +1,18 @@
 scene = {
     cubo = {
         Transform = {
-            position = {  -3.500000 ,1.500000 ,-0.000000 },
-            rotation = {  0.923880 ,-0.000000 ,0.000000 ,-0.382683 },
-            scale = {  1.000000 ,1.000000 ,1.000000 },
+            position = " -3.500000 ,1.500000 ,-0.000000 ",
+            rotation = " 0.923880 ,-0.000000 ,0.000000 ,-0.382683 ",
+            scale = " 1.000000 ,1.000000 ,1.000000 ",
         },
         GameObjectType = {
-            Character
+            "Character"
         },
         RigidBody = {
-            Type = Dynamic,
-            Collider = Box,
-            Mass = 1.0,
-            isTrigger = false
+            Type = "Dynamic",
+             Collider = "Box",
+             Mass = "1.0",
+            isTrigger = "false"
         },
         MeshRenderer = {
             MeshFile = "cubo.mesh",
@@ -20,18 +20,18 @@ scene = {
     },
     suelo = {
         Transform = {
-            position = {  -3.500000 ,-0.500000 ,0.000000 },
-            rotation = {  0.923880 ,-0.000000 ,0.000000 ,-0.382683 },
-            scale = {  1.000000 ,1.000000 ,1.000000 },
+            position = " -3.500000 ,-0.500000 ,0.000000 ",
+            rotation = " 0.923880 ,-0.000000 ,0.000000 ,-0.382683 ",
+            scale = " 1.000000 ,1.000000 ,1.000000 ",
         },
         GameObjectType = {
-            Map
+            "Map"
         },
         RigidBody = {
-            Type = Static,
-             Collider = Box,
-             Mass = 1.0,
-             isTrigger = false
+            Type = "Static",
+             Collider = "Box",
+             Mass = "1.0",
+             isTrigger = "false"
         },
         MeshRenderer = {
             MeshFile = "suelo.mesh",
@@ -39,18 +39,18 @@ scene = {
     },
     detalle = {
         Transform = {
-            position = {  -2.322678 ,0.085155 ,0.000000 },
-            rotation = {  0.923880 ,-0.000000 ,0.000000 ,-0.382683 },
-            scale = {  1.000000 ,1.000000 ,1.000000 },
+            position = " -2.322678 ,0.085155 ,0.000000 ",
+            rotation = " 0.923880 ,-0.000000 ,0.000000 ,-0.382683 ",
+            scale = " 1.000000 ,1.000000 ,1.000000 ",
         },
         GameObjectType = {
-            Map
+            "Map"
         },
         RigidBody = {
-            Type = Static,
-             Collider = Box,
-             Mass = 1.0,
-             isTrigger = false
+            Type = "Static",
+             Collider = "Box",
+             Mass = "1.0",
+             isTrigger = "false"
         },
         MeshRenderer = {
             MeshFile = "detalle.mesh",
@@ -58,4 +58,4 @@ scene = {
     },
 }
 
-entities = {cubo ,suelo ,detalle }
+entities = {"cubo" ,"suelo" ,"detalle" }

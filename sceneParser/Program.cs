@@ -31,8 +31,8 @@ namespace sceneParser {
             lua.WriteLine("");
             lua.Write("entities = {");
             for (int i = 0; i < entidades.Count - 1; i++)
-                lua.Write(entidades[i] + " ,");
-            lua.WriteLine(entidades[entidades.Count - 1] + " }");
+                lua.Write("\"" + entidades[i] + "\" ,");
+            lua.WriteLine("\"" + entidades[entidades.Count - 1] + "\" }");
             
             xtr.Close();
             lua.Close();
@@ -63,7 +63,7 @@ namespace sceneParser {
 
             for (int j = 0; j < numberTransform; j++){
                 readNextElement(ref xtr);
-                lua.Write(numberIndentations + xtr.Name + " = { ");
+                lua.Write(numberIndentations + xtr.Name + " = \"");
 
                 xtr.MoveToAttribute(0);
                 lua.Write(" " + xtr.Value + " ");
@@ -71,7 +71,7 @@ namespace sceneParser {
                     xtr.MoveToAttribute(i);
                     lua.Write("," + xtr.Value + " ");
                 }
-                lua.WriteLine("},");
+                lua.WriteLine("\",");
             }
 
             nSpaces -= 4;

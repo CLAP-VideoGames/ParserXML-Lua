@@ -33,7 +33,13 @@ namespace sceneParser {
             for (int i = 0; i < entidades.Count - 1; i++)
                 lua.Write("\"" + entidades[i] + "\" ,");
             lua.WriteLine("\"" + entidades[entidades.Count - 1] + "\" }");
-            
+            lua.Write("\n");
+            if (args.Length == 3){
+                StreamReader codeLua = new StreamReader(args[2]);
+                string code;
+                while ((code = codeLua.ReadLine())  != null)
+                    lua.WriteLine(code);
+            }
             xtr.Close();
             lua.Close();
         }

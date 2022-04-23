@@ -125,7 +125,7 @@ namespace sceneParser {
             while(xtr.NodeType != XmlNodeType.EndElement){
                 if(xtr.GetAttribute("name") == "Enabled"){
                     lua.Write(numberIndentations + xtr.GetAttribute("name") + " = ");
-                    string[] data_ = xtr.GetAttribute("data").Split(',');
+                    string[] data_ = xtr.GetAttribute("data").Split(';');
 
                     for (int i = 0; i < data_.Length; i++)
                         lua.WriteLine(data_[i] + ",");
@@ -138,9 +138,19 @@ namespace sceneParser {
                     nSpaces += 4;
                     numberIndentations = new string(c, nSpaces);
 
-                    string[] data = xtr.GetAttribute("data").Split(',');
-                    for (int i = 0; i < data.Length - 1; i++)
-                        lua.WriteLine(numberIndentations + data[i] + ",");
+                    string[] data = xtr.GetAttribute("data").Split(';');
+                    for (int i = 0; i < data.Length - 1; i++){
+                        if (data[i].Split('=')[0] == "Dimensions "){
+                            int index = data[i].IndexOf('\"') + 1;
+                            int length = data[i].Length - 2 - index;
+                            string aux = data[i].Substring(index, length);
+                            string[] dimensionsData = aux.Split(',');
+                            string dimensions = "\"" + dimensionsData[0] + ", " + dimensionsData[2] + ", " + dimensionsData[1] + "\"";
+                            lua.WriteLine(numberIndentations + "Dimensions = " + dimensions + ",");
+                        }
+                        else
+                            lua.WriteLine(numberIndentations + data[i] + ",");
+                    }
                 
                     lua.WriteLine(numberIndentations + data[data.Length - 1]);
                     nSpaces -= 4;
@@ -163,7 +173,7 @@ namespace sceneParser {
             numberIndentations = new string(c, nSpaces);
             lua.WriteLine(numberIndentations + "MeshFile = \"" + xtr.GetAttribute("meshFile") + "\",");
             if(materialName != null){
-                materialName = materialName.Insert(materialName.Length - 1, ".material");
+                //materialName = materialName.Insert(materialName.Length - 1, ".material");
                 lua.WriteLine(numberIndentations + "Material = " + materialName + ",");
             }
             nSpaces -= 4;

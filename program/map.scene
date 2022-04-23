@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- exporter: blender2ogre 0.8.2 -->
-<!-- export_time: Sat, 23 Apr 2022 13:09:35 +0000 -->
-<!-- previous_export_time: Sat, 23 Apr 2022 12:59:12 +0000 -->
+<!-- export_time: Sat, 23 Apr 2022 15:09:48 +0000 -->
+<!-- previous_export_time: Sat, 23 Apr 2022 14:41:44 +0000 -->
 <scene author="joseda" formatVersion="1.1" >
   <nodes >
     <node name="cubo" >
       <position x="0.000000" y="-0.500000" z="-0.000000" />
       <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="-0.000000" />
-      <scale x="10.000000" y="10.000000" z="10.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
       <userData >
-        <property data='&lt;bpy id prop: owner="OBcubo", name="cycles", address=0x0000015581EA84A8&gt;' name="cycles" type="IDPropertyGroup" />
-        <property data='&lt;bpy id prop: owner="OBcubo", name="M3", address=0x00000155EFFC1F88&gt;' name="M3" type="IDPropertyGroup" />
-        <property data='Type = "Static", Collider = "Box", Mass = "0.0",isTrigger = "false", isEnabled = "true"' name="RigidBody" type="str" />
+        <property data='&lt;bpy id prop: owner="OBcubo", name="cycles", address=0x0000023B3FD362A8&gt;' name="cycles" type="IDPropertyGroup" />
+        <property data='&lt;bpy id prop: owner="OBcubo", name="M3", address=0x0000023B3FD36208&gt;' name="M3" type="IDPropertyGroup" />
+        <property data='Type = "Static" ;Collider = "Box" ;Mass = "0.0" ;Dimensions = "10, 10, 1.69" ;isTrigger = "false" ;isEnabled = "true"' name="RigidBody" type="str" />
         <property data='"true"' name="Enabled" type="str" />
       </userData>
       <entity meshFile="cubo.mesh" name="cubo" >
@@ -23,42 +23,12 @@
       <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="-0.000000" />
       <scale x="1.000000" y="1.000000" z="1.000000" />
       <userData >
-        <property data='&lt;bpy id prop: owner="OBoriginalPieceMap", name="M3", address=0x00000155813D3108&gt;' name="M3" type="IDPropertyGroup" />
-        <property data='&lt;bpy id prop: owner="OBoriginalPieceMap", name="cycles", address=0x00000155813D3568&gt;' name="cycles" type="IDPropertyGroup" />
-        <property data='Type = "Dynamic", Collider = "Box", Mass = "1.0",isTrigger = "false", isEnabled = "true"' name="RigidBody" type="str" />
+        <property data='&lt;bpy id prop: owner="OBoriginalPieceMap", name="M3", address=0x0000023B3FD35448&gt;' name="M3" type="IDPropertyGroup" />
+        <property data='&lt;bpy id prop: owner="OBoriginalPieceMap", name="cycles", address=0x0000023B3FD353A8&gt;' name="cycles" type="IDPropertyGroup" />
+        <property data='Type = "Dynamic" ;Collider = "Box" ;Mass = "1.0" ;Dimensions = "1, 1, 1" ;isTrigger = "false" ;isEnabled = "true"' name="RigidBody" type="str" />
         <property data='"true"' name="Enabled" type="str" />
       </userData>
       <entity meshFile="pieceMap.mesh" name="originalPieceMap" >
-        <userData />
-      </entity>
-    </node>
-    <node name="pieceMap_001" >
-      <position x="0.679943" y="1.571774" z="0.000000" />
-      <rotation qw="0.974416" qx="0.000000" qy="0.000000" qz="-0.224753" />
-      <scale x="1.000000" y="1.000000" z="1.000000" />
-      <userData >
-        <property data='&lt;bpy id prop: owner="OBpieceMap_001", name="M3", address=0x0000015581E99768&gt;' name="M3" type="IDPropertyGroup" />
-        <property data='&lt;bpy id prop: owner="OBpieceMap_001", name="cycles", address=0x00000155EFEEE848&gt;' name="cycles" type="IDPropertyGroup" />
-        <property data='Type = "Dynamic", Collider = "Box", Mass = "1.0",isTrigger = "false", isEnabled = "true"' name="RigidBody" type="str" />
-        <property data='"true"' name="Enabled" type="str" />
-        <property data='"grass"' name="Material" type="str" />
-      </userData>
-      <entity meshFile="pieceMap.mesh" name="pieceMap_001" >
-        <userData />
-      </entity>
-    </node>
-    <node name="pieceMap_002" >
-      <position x="-0.268904" y="2.678121" z="-0.412959" />
-      <rotation qw="0.908466" qx="-0.088322" qy="0.326124" qz="-0.246033" />
-      <scale x="1.000000" y="1.000000" z="1.000000" />
-      <userData >
-        <property data='&lt;bpy id prop: owner="OBpieceMap_002", name="M3", address=0x00000155E7F59588&gt;' name="M3" type="IDPropertyGroup" />
-        <property data='&lt;bpy id prop: owner="OBpieceMap_002", name="cycles", address=0x00000155E7F58F48&gt;' name="cycles" type="IDPropertyGroup" />
-        <property data='Type = "Dynamic", Collider = "Box", Mass = "1.0",isTrigger = "false", isEnabled = "true"' name="RigidBody" type="str" />
-        <property data='"true"' name="Enabled" type="str" />
-        <property data='"black"' name="Material" type="str" />
-      </userData>
-      <entity meshFile="pieceMap.mesh" name="pieceMap_002" >
         <userData />
       </entity>
     </node>
@@ -67,63 +37,19 @@
       <rotation qw="0.908466" qx="-0.088322" qy="0.326124" qz="-0.246033" />
       <scale x="1.000000" y="1.000000" z="1.000000" />
       <userData >
-        <property data='&lt;bpy id prop: owner="OBoriginalSphere", name="M3", address=0x0000015581C8B248&gt;' name="M3" type="IDPropertyGroup" />
-        <property data='&lt;bpy id prop: owner="OBoriginalSphere", name="cycles", address=0x0000015581C8B568&gt;' name="cycles" type="IDPropertyGroup" />
-        <property data='Type = "Dynamic", Collider = "Sphere", Mass = "1.0",isTrigger = "false", isEnabled = "true"' name="RigidBody" type="str" />
+        <property data='&lt;bpy id prop: owner="OBoriginalSphere", name="M3", address=0x0000023B3FD35128&gt;' name="M3" type="IDPropertyGroup" />
+        <property data='&lt;bpy id prop: owner="OBoriginalSphere", name="cycles", address=0x0000023B3FD35088&gt;' name="cycles" type="IDPropertyGroup" />
+        <property data='Type = "Dynamic" ;Collider = "Sphere" ;Mass = "1.0" ;Dimensions = "1, 1, 1" ;isTrigger = "false" ;isEnabled = "true"' name="RigidBody" type="str" />
         <property data='"true"' name="Enabled" type="str" />
       </userData>
       <entity meshFile="ball.mesh" name="originalSphere" >
         <userData />
       </entity>
     </node>
-    <node name="platform" >
-      <position x="-5.046125" y="2.160827" z="0.000000" />
-      <rotation qw="0.969303" qx="0.000000" qy="0.000000" qz="-0.245870" />
-      <scale x="3.630128" y="1.000000" z="3.716347" />
-      <userData >
-        <property data='&lt;bpy id prop: owner="OBplatform", name="cycles", address=0x00000155E7F59628&gt;' name="cycles" type="IDPropertyGroup" />
-        <property data='&lt;bpy id prop: owner="OBplatform", name="M3", address=0x00000155E7F59448&gt;' name="M3" type="IDPropertyGroup" />
-        <property data='Type = "Static", Collider = "Box", Mass = "0.0",isTrigger = "false", isEnabled = "true"' name="RigidBody" type="str" />
-        <property data='"true"' name="Enabled" type="str" />
-      </userData>
-      <entity meshFile="platform.mesh" name="platform" >
-        <userData />
-      </entity>
-    </node>
-    <node name="sphere_001" >
-      <position x="-5.564610" y="4.872576" z="0.967044" />
-      <rotation qw="0.908466" qx="-0.088322" qy="0.326124" qz="-0.246033" />
-      <scale x="1.000000" y="1.000000" z="1.000000" />
-      <userData >
-        <property data='&lt;bpy id prop: owner="OBsphere_001", name="M3", address=0x0000015581C8A2A8&gt;' name="M3" type="IDPropertyGroup" />
-        <property data='&lt;bpy id prop: owner="OBsphere_001", name="cycles", address=0x0000015581C8B9C8&gt;' name="cycles" type="IDPropertyGroup" />
-        <property data='Type = "Dynamic", Collider = "Sphere", Mass = "1.0",isTrigger = "false", isEnabled = "true"' name="RigidBody" type="str" />
-        <property data='"true"' name="Enabled" type="str" />
-        <property data='"grass"' name="Material" type="str" />
-      </userData>
-      <entity meshFile="ball.mesh" name="sphere_001" >
-        <userData />
-      </entity>
-    </node>
-    <node name="sphere_002" >
-      <position x="-4.013021" y="4.872576" z="-1.262424" />
-      <rotation qw="0.908466" qx="-0.088322" qy="0.326124" qz="-0.246033" />
-      <scale x="1.000000" y="1.000000" z="1.000000" />
-      <userData >
-        <property data='&lt;bpy id prop: owner="OBsphere_002", name="M3", address=0x00000155821C09A8&gt;' name="M3" type="IDPropertyGroup" />
-        <property data='&lt;bpy id prop: owner="OBsphere_002", name="cycles", address=0x00000155821C1BC8&gt;' name="cycles" type="IDPropertyGroup" />
-        <property data='Type = "Dynamic", Collider = "Sphere", Mass = "6.0",isTrigger = "false", isEnabled = "true"' name="RigidBody" type="str" />
-        <property data='"true"' name="Enabled" type="str" />
-        <property data='"black"' name="Material" type="str" />
-      </userData>
-      <entity meshFile="ball.mesh" name="sphere_002" >
-        <userData />
-      </entity>
-    </node>
   </nodes>
   <externals >
     <item type="material" >
-      <file name="platform.material" />
+      <file name="ground.material" />
     </item>
     <item type="material" >
       <file name="black.material" />
@@ -133,9 +59,6 @@
     </item>
     <item type="material" >
       <file name="grass.material" />
-    </item>
-    <item type="material" >
-      <file name="ground.material" />
     </item>
   </externals>
   <environment >

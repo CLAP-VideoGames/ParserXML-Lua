@@ -8,7 +8,7 @@ using System.Numerics;
 namespace sceneParser {
     
     class Program{
-
+        static string materialName;
         static void Main(string[] args) {
             StreamWriter lua = new StreamWriter(args[0]);
             XmlTextReader xtr = new XmlTextReader(args[1]);
@@ -56,6 +56,7 @@ namespace sceneParser {
             numberIndentations = new string(c, nSpaces);
             processTransform(ref lua, ref xtr, ref numberIndentations, ref nSpaces, c);
             readNextElement(ref xtr);
+            materialName = null;
             processComponents(ref lua, ref xtr, ref numberIndentations, ref nSpaces, c);
             readNextElement(ref xtr);
             processMeshData(ref lua, ref xtr, ref numberIndentations, ref nSpaces, c);
@@ -123,28 +124,29 @@ namespace sceneParser {
 
             while(xtr.NodeType != XmlNodeType.EndElement){
                 if(xtr.GetAttribute("name") == "Enabled"){
-
                     lua.Write(numberIndentations + xtr.GetAttribute("name") + " = ");
                     string[] data_ = xtr.GetAttribute("data").Split(',');
 
                     for (int i = 0; i < data_.Length; i++)
                         lua.WriteLine(data_[i] + ",");
-
-                    readNextElement(ref xtr);
-                    continue;
+                }else if (xtr.GetAttribute("name") == "Material"){
+                    materialName = new String(xtr.GetAttribute("data"));
                 }
-                lua.WriteLine(numberIndentations + xtr.GetAttribute("name") + " = {");
-                nSpaces += 4;
-                numberIndentations = new string(c, nSpaces);
+                else
+                {
+                    lua.WriteLine(numberIndentations + xtr.GetAttribute("name") + " = {");
+                    nSpaces += 4;
+                    numberIndentations = new string(c, nSpaces);
 
-                string[] data = xtr.GetAttribute("data").Split(',');
-                for (int i = 0; i < data.Length - 1; i++)
-                    lua.WriteLine(numberIndentations + data[i] + ",");
+                    string[] data = xtr.GetAttribute("data").Split(',');
+                    for (int i = 0; i < data.Length - 1; i++)
+                        lua.WriteLine(numberIndentations + data[i] + ",");
                 
-                lua.WriteLine(numberIndentations + data[data.Length - 1]);
-                nSpaces -= 4;
-                numberIndentations = new string(c, nSpaces);
-                lua.WriteLine(numberIndentations + "},");
+                    lua.WriteLine(numberIndentations + data[data.Length - 1]);
+                    nSpaces -= 4;
+                    numberIndentations = new string(c, nSpaces);
+                    lua.WriteLine(numberIndentations + "},");
+                }
                 readNextElement(ref xtr);
             }
         }
@@ -160,6 +162,10 @@ namespace sceneParser {
             nSpaces += 4;
             numberIndentations = new string(c, nSpaces);
             lua.WriteLine(numberIndentations + "MeshFile = \"" + xtr.GetAttribute("meshFile") + "\",");
+            if(materialName != null){
+                materialName = materialName.Insert(materialName.Length - 1, ".material");
+                lua.WriteLine(numberIndentations + "Material = " + materialName + ",");
+            }
             nSpaces -= 4;
             numberIndentations = new string(c, nSpaces);
             lua.WriteLine(numberIndentations + "}");
